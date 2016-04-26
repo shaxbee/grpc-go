@@ -251,6 +251,7 @@ func (s *Stream) TraceContext(tr trace.Trace) {
 	s.ctx = trace.NewContext(s.ctx, tr)
 }
 
+// SetContextMetadata recreates the context of the stream with a metadata.MD.
 func (s *Stream) SetContextMetadata(md metadata.MD) {
 	s.ctx = metadata.NewContext(s.ctx, md)
 }
